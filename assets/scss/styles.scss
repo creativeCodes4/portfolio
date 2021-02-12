@@ -1,0 +1,331 @@
+// Importing Configurations...
+
+@import 'config';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $primary-color;
+  font-family: $open-sans;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba($dark-blue, $alpha: 0.2);
+  position: relative;
+  .logo {
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+  }
+
+  .trigger {
+    width: 100px;
+    display: none;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(darken($dark-blue, 5), $alpha: 0.8);
+    top: -50px;
+    left: -50px;
+    transform: rotate(5deg);
+  }
+
+  .triggeranimation {
+    animation: spinner 0.5s alternate forwards;
+  }
+
+  //   Burger Menu...
+
+  .burger {
+    cursor: pointer;
+    div {
+      //   width: 30px;
+      height: 4px;
+      background-color: rgb(266, 266, 266);
+      margin: 6px;
+      transition: all 0.5s ease;
+      border-radius: 50px;
+    }
+    .bar-1 {
+      width: 35px;
+    }
+    .bar-2 {
+      width: 25px;
+    }
+    .bar-3 {
+      width: 30px;
+    }
+  }
+
+  //   Navigation...
+
+  nav {
+    visibility: hidden;
+    z-index: 3;
+    .burger {
+      position: absolute;
+      right: 32px;
+      top: 25px;
+      opacity: 0;
+    }
+    .toggle .line1 {
+      width: 35px;
+      transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      width: 35px;
+      transform: rotate(45deg) translate(-8px, -6px);
+    }
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(darken($dark-blue, 5), $alpha: 0.8);
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transform: translateX(-20px);
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        a {
+          color: $light-color;
+          text-align: center;
+          font-size: 1.3rem;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+// Main Contents...
+
+main {
+  height: 90vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      .text {
+        border-right: 0.15rem solid $dark-blue;
+      }
+    }
+    .avatar {
+      img {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: $white-smoke;
+  position: relative;
+  .contents {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .image {
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+        }
+      }
+      h1 {
+        margin: 0rem 3rem;
+        font-size: 3rem;
+        font-weight: 500;
+      }
+    }
+    .body {
+      width: 100%;
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &-header {
+          padding: 2rem;
+          width: 150px;
+          height: 150px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $light-color;
+          border-radius: 50%;
+          font-size: 3rem;
+          color: darken($green-color, 5);
+        }
+        &-body {
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: darken($green-color, 5);
+        }
+      }
+    }
+  }
+
+  // Up Button...
+  .up-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    top: 85%;
+    left: 95%;
+    color: $light-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#skills {
+  width: 100%;
+  height: 100vh;
+  background-color: $white-smoke;
+  position: relative;
+  .contents {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    h1 {
+      margin: 1rem 3rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    .skills {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 4rem 2rem;
+      .skill {
+        display: flex;
+        flex-direction: column;
+        .progress-bar {
+          width: 300px;
+          height: 10px;
+          background-color: $primary-color;
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+
+        .progress-bar::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          background-color: $light-color;
+        }
+        .bar-50::before {
+          left: 50%;
+        }
+        .bar-65::before {
+          left: 65%;
+        }
+        .bar-70::before {
+          left: 70%;
+        }
+        .bar-75::before {
+          left: 75%;
+        }
+        .bar-80::before {
+          left: 80%;
+        }
+        .bar-95::before {
+          left: 95%;
+        }
+      }
+    }
+  }
+  // Up Button...
+  .up-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    top: 85%;
+    left: 95%;
+    color: $light-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Importing Utilities...
+
+@import 'utilities';
+
+// Importing Media Queries...
+
+@import './mQueries/tablet';
+@import './mQueries/mobile';
+
+// Importing Keyframes...
+
+@import './keyframes';

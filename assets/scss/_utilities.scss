@@ -1,0 +1,48 @@
+.text {
+  &-white {
+    color: $light-color;
+  }
+  &-primary {
+    color: $primary-color;
+  }
+  &-dark-blue {
+    color: $dark-blue;
+  }
+  &-green {
+    color: $green-color;
+  }
+  &-grey {
+    color: $grey-color;
+  }
+}
+h1 {
+  font-weight: 400;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &-light {
+    background-color: $light-color;
+  }
+  &-outline-light {
+    border: 3px solid $light-color;
+    background: transparent;
+    color: $light-color;
+    z-index: 0;
+  }
+  &-outline-light:hover {
+    background-color: $light-color;
+    color: $primary-color;
+    transition: 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  &-lg {
+    padding: 0.7rem 3rem;
+    font-size: 1.3rem;
+  }
+  &-rounded {
+    border-radius: 10rem;
+  }
+}

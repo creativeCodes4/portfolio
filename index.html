@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--  Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.jpg"
+      type="image/icon type"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+
+    <title>Creative Codes</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header id="home">
+      <div class="logo">
+        <img src="./assets/img/avatar.jpg" alt="Logo" />
+      </div>
+      <div class="burger" id="menu-trigger">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+      </div>
+      <nav>
+        <div class="burger" id="close-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="trigger"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="home-body">
+        <div class="contents">
+          <h1 class="text-white">
+            ¡Hola!
+            <br />
+            I'm Kevin
+          </h1>
+          <div class="typewriter" id="typewriter">
+            <h2 class="text-dark-blue">
+              Web
+              <span
+                class="text-type"
+                data-wait="3000"
+                data-words='["Developer", "Designer"]'
+              >
+              </span>
+            </h2>
+          </div>
+          <a href="#skills">
+            <button class="btn btn-outline-light btn-lg btn-rounded">
+              Explore
+            </button>
+          </a>
+        </div>
+        <div class="avatar">
+          <img src="./assets/img/avatar.jpg" alt="Creative Codes Logo" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="contents">
+        <div class="header">
+          <h1 class="text-green">Skills</h1>
+        </div>
+        <div class="skills">
+          <div class="part1">
+            <div class="skill">
+              <h2>UX/UI Design</h2>
+              <div class="progress-bar bar-65"></div>
+            </div>
+            <div class="skill">
+              <h2>Javascript</h2>
+              <div class="progress-bar bar-80"></div>
+            </div>
+            <div class="skill">
+              <h2>React</h2>
+              <div class="progress-bar bar-50"></div>
+            </div>
+          </div>
+          <div class="part1">
+            <div class="skill">
+              <h2>HTML5 / CSS3</h2>
+              <div class="progress-bar bar-95"></div>
+            </div>
+            <div class="skill">
+              <h2>MySQL</h2>
+              <div class="progress-bar bar-75"></div>
+            </div>
+            <div class="skill">
+              <h2>PHP</h2>
+              <div class="progress-bar bar-70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#home">
+        <div class="up-btn">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </a>
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about">
+      <div class="contents">
+        <div class="header">
+          <div class="image">
+            <img src="./assets/img/avatar.jpg" alt="Logo" />
+          </div>
+          <h1 class="text-green">
+            Junior <br />
+            Web Developer
+          </h1>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="card-header">
+              <i class="far fa-clock"></i>
+            </div>
+            <div class="card-body">
+              <h2>Fast</h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="card-body">
+              <h2>Secured</h2>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-body">
+              <h2>Accurate</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#home">
+        <div class="up-btn">
+          <i class="fas fa-chevron-up"></i>
+        </div>
+      </a>
+    </section>
+  </body>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/typewriter.js"></script>
+  <script
+    src="https://kit.fontawesome.com/f8dcd23edf.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
